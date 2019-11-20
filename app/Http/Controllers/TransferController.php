@@ -17,6 +17,6 @@ class TransferController extends Controller
         'amount' => $request->amount,
         'wallet_id' => $request->wallet_id,
       ]);
-      return response()->json($transfer,201);
+      return response()->json((object)array_merge($transfer->toArray(),['money' => $wallet->money]),201);
     }
 }

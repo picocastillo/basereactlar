@@ -27,7 +27,7 @@ class TransferTest extends TestCase
         ]);
 
         $response->assertJsonStructure([
-          'id','description','amount','wallet_id'
+          'id','description','amount','wallet_id','money'
         ])->assertStatus(201);
 
         $this->assertDatabaseHas('transfers',[

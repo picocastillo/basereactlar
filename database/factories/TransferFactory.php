@@ -8,7 +8,7 @@ use Faker\Generator as Faker;
 $factory->define(Transfer::class, function (Faker $faker) {
     return [
         'description' => 'asd',
-        'amount' => rand(1,900),
+        'amount' => rand(-900,900),
         'wallet_id'  => 1
     ];
 });
